@@ -2,6 +2,8 @@ import unittest
 from CalculadoraBasica import CalculadoraBasica
 from CalculadorAvancada import CalculadorAvancada 
 
+
+
 class OperacaoFabrica(object):
 
     def criar(self, operador):
