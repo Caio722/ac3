@@ -14,7 +14,6 @@ class OperacaoFabrica(object):
         elif (operador == 'multiplicacao'):
             return Multiplicacao()
 
-
 class Operacao(metaclass=abc.ABCMeta):
 
     @abc.abstractclassmethod
