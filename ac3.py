@@ -2,7 +2,22 @@ import unittest
 from CalculadoraBasica import CalculadoraBasica
 from CalculadorAvancada import CalculadorAvancada 
 
-class Testes(unittest.TestCase):
+class MyTestCase(unittest.TestCase):
+    def tes_something(self):
+        calcula = CalculadoraBasica()
+        testesoma = calcula.somar(5, 4)
+        self.assertEqual(testesoma, 9)
+
+        testesoma = calcula.dividir(5,4)
+        self.assetEqual(testesoma, 1.25)
+
+
+    def teste_avancado(self):
+        calculaAvanc = CalculadorAvancada()
+        testeRais= calculaAvanc.raizQuadrada(81)
+        self.assertEqual(testeRaiz, 9)
+
+
     def test_soma(self):
         calculador = Calculadora()
         result = calculador.calcular(2, 3, 'soma')
