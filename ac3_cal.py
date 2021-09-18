@@ -1,9 +1,19 @@
-import unittest
-from CalculadoraBasica import CalculadoraBasica
-from CalculadorAvancada import CalculadorAvancada 
+import abc
 
 
+class Calculadora (object):
 
+    def calcular(self, valor1, valor2, operador):
+        operacaoFabrica = OperacaoFabrica()
+        operacao = operacaoFabrica.criar(operador)
+        if(operacao == None):
+            return 0
+        else:
+            operacao = operacaoFabrica.criar(operador)
+            resultado = operacao.executar(valor1, valor2)
+            return resultado
+
+            
 class OperacaoFabrica(object):
 
     def criar(self, operador):
